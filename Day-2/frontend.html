@@ -5,6 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+         #container{
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(1, auto);
+gap: 20px;
+
+
+
+}
+#container>div{
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+img{
+width: 100%;
+}
+p + img {
+height: 50px;
+width: 50%;
+margin-left: 90px;
+}
+h1,h3,p{
+text-align: center;
+font-weight: bolder;
+}
+img{
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+margin-top: -10px;
+}
+p{
+color: gray;
+}
+    </style>
     
   </head>
   <body>
@@ -24,7 +60,7 @@
         var p=document.createElement("p");
         p.innerText=el.investorRole;
         var img2=document.createElement("img");
-        img2.setAttribute("src",el.CompanyLogo);
+        img2.setAttribute("src",el.investorCompanyLogo);
         box.append(img,h3,p,img2);
         document.querySelector("#container").append(box);
 
